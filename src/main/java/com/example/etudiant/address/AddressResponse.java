@@ -11,5 +11,5 @@ public class AddressResponse {
     private Integer id;
 
     private String homeAddress;
-    private String firstname;
+    private Integer std_id;
 }

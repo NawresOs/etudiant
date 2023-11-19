@@ -1,8 +1,5 @@
 package com.example.etudiant.chapter;
 
-import com.example.etudiant.student.Student;
-import com.example.etudiant.student.StudentRequest;
-import com.example.etudiant.student.StudentResponse;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -19,7 +16,7 @@ public class ChapterMapper {
     }
 
 
-    public Chapter toChapter(ChapterRequest c){
+    public Chapter toChapter(ChapterResponse c){
         Chapter chapter=new Chapter();
         chapter.setId(c.getId());
         chapter.setName(c.getName());

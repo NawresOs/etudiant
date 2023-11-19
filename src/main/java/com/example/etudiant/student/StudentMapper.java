@@ -4,7 +4,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class StudentMapper {
-
     public StudentResponse toStudentDto(Student std) {
         return StudentResponse.builder()
                 .firstname(std.getFirstname())
@@ -13,7 +12,6 @@ public class StudentMapper {
                 .nbrSubjects(std.getSubjects().size())
                 .build();
     }
-
     public Student toStudent(StudentRequest s) {
         Student student = new Student();
         student.setId(s.getId());

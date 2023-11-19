@@ -12,7 +12,7 @@ public class AdderssMapper {
         return AddressResponse.builder()
                 .id(adr.getId())
                 .homeAddress(adr.getHomeAddress())
-                .firstname(adr.getStudent().getFirstname())
+                .std_id(adr.getStudent().getId())
                 .build();
     }
 
