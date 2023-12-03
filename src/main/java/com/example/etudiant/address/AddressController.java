@@ -1,5 +1,6 @@
 package com.example.etudiant.address;
 
+
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,4 +19,3 @@ public class AddressController {
         servicea.save(addr);
     }
 }
-

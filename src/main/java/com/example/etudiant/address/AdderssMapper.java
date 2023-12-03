@@ -1,28 +1,22 @@
 package com.example.etudiant.address;
 
-import com.example.etudiant.student.Student;
-import com.example.etudiant.student.StudentRequest;
-import com.example.etudiant.student.StudentResponse;
 import org.springframework.stereotype.Service;
 
 @Service
 public class AdderssMapper {
 
-    public AddressResponse toAddressDto(Address adr) {
+    public AddressResponse toAddresDto(Address address){
         return AddressResponse.builder()
-                .id(adr.getId())
-                .homeAddress(adr.getHomeAddress())
-                .std_id(adr.getStudent().getId())
+                .id(address.getId())
+                .homeAddress(address.getHomeAddress())
+                .std_id(address.getStudent().getId())
                 .build();
     }
 
-
-    public Address toAddress(AddressRequest a) {
+    public Address toAddress(AddressRequest addressRequest){
         Address address=new Address();
         address.setId(address.getId());
         address.setHomeAddress(address.getHomeAddress());
-      
-        return address;
+        return  address;
     }
-
 }

@@ -3,12 +3,10 @@ package com.example.etudiant.subject;
 import java.util.List;
 
 public interface SubjectService {
-
- public void save(Subject sub);
-    void save(SubjectResponse s);
+    void save(SubjectRequest s);
     SubjectResponse findById(Integer id);
-    List<SubjectResponse> findAll ();
+    List<SubjectResponse> findAll();
     void deleteById(Integer id);
 
-
+    void assignSubjectToStudent(Integer subjectId, Integer studentId);
 }

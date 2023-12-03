@@ -1,5 +1,4 @@
 package com.example.etudiant.address;
-
 import lombok.*;
 
 @Getter

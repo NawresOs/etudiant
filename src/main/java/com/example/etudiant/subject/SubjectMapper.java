@@ -1,40 +1,25 @@
 package com.example.etudiant.subject;
 
-import com.example.etudiant.chapter.ChapterResponse;
-import com.example.etudiant.student.Student;
-import com.example.etudiant.student.StudentRequest;
-import com.example.etudiant.student.StudentResponse;
+import com.example.etudiant.chapter.Chapter;
+import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+
+@Service
 public class SubjectMapper {
-
-    /*public StudentResponse toStudentDto(Student std) {
-        return StudentResponse.builder()
-                .firstname(std.getFirstname())
-                .lastname(std.getLastname())
-                .age(std.getAge())
-                .nbrSubjects(std.getSubjects().size())
+    public Subject toSubject(SubjectRequest s) {
+        if (s == null) {
+            return Subject.builder().build();
+        }
+        return Subject.builder()
+                .id(s.getId())
+                .name(s.getName())
                 .build();
     }
-    public Student toStudent(StudentRequest s) {
-        Student student = new Student();
-        student.setId(s.getId());
-        student.setFirstname(s.getFirstname());
-        student.setLastname(s.getLastname());
-        student.setAge(s.getAge());
-        return student;
-    }*/
-
-    public SubjectResponse toSubjectDto(Subject sub){
+    public SubjectResponse toSubjectResponse(Subject subject) {
         return SubjectResponse.builder()
-                .name(sub.getName())
+                .name(subject.getName())
                 .build();
     }
 
-    public Subject toSubject(SubjectRequest sb){
-        Subject subject=new Subject();
-        subject.setId(sb.getId());
-        //subject.setChapters();
-       // subject.getStudents(sb.getStd_id());
-        return subject;
-    }
 }

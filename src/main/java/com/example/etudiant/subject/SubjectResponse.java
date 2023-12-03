@@ -1,6 +1,9 @@
 package com.example.etudiant.subject;
-
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @Setter
@@ -9,6 +12,4 @@ import lombok.*;
 @Builder
 public class SubjectResponse {
     private String name;
-    private Integer sub_id;
-    private Integer std_id;
 }

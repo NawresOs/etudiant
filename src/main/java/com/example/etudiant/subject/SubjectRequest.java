@@ -1,5 +1,6 @@
 package com.example.etudiant.subject;
 
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
@@ -11,9 +12,7 @@ import lombok.*;
 public class SubjectRequest {
 
     private Integer id;
-    @NotNull(message = "name must not be null")
+    @NotNull(message = "Subject name is mandatory")
+    @NotEmpty(message = "Subject name is mandatory")
     private String name;
-    private Integer sub_id;
-    private Integer std_id;
-
 }
